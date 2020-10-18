@@ -63,10 +63,10 @@ for anchor in soup.find_all('a'):
     if shortlinks[0] != 'error':
         data.append([headline.text, shortlinks[0]])
 
-os.system('cls' if os.name == 'nt' else 'clear')
-table_result = SingleTable(data)
-table_result.inner_row_border = True
-print(table_result.table)
+    os.system('cls' if os.name == 'nt' else 'clear')
+    table_result = SingleTable(data)
+    table_result.inner_row_border = True
+    print(table_result.table)
 
 conn.commit()
 conn.close()
